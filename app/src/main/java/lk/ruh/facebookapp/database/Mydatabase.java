@@ -2,6 +2,7 @@ package lk.ruh.facebookapp.database;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -55,6 +56,12 @@ public class Mydatabase extends SQLiteOpenHelper {
             return false;
         else
             return true;
+    }
+
+    public Cursor getAll(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor rs = db.rawQuery("SELECT * FROM "+TABLE_NAME,null);
+        return  rs;
     }
 
 }
