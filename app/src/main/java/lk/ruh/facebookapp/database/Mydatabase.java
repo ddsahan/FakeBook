@@ -64,4 +64,10 @@ public class Mydatabase extends SQLiteOpenHelper {
         return  rs;
     }
 
+    public  Cursor getStudentName(String stu_name){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor rs = db.rawQuery("SELECT * FROM "+TABLE_NAME + " WHERE name = "+stu_name,null);
+        return rs;
+    }
+
 }
