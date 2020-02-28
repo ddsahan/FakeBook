@@ -12,10 +12,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import lk.ruh.facebookapp.data.MyDataBase;
 import lk.ruh.facebookapp.database.Mydatabase;
+import static lk.ruh.facebookapp.database.Mydatabase.DB_NAME;
+import static lk.ruh.facebookapp.database.Mydatabase.DB_VERSION;
 
-import static lk.ruh.facebookapp.data.MyDataBase.*;
 
 public class FragmentOne extends Fragment {
 

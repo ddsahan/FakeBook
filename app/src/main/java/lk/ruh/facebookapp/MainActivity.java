@@ -8,9 +8,9 @@ import android.os.Bundle;
 import com.google.android.material.tabs.TabLayout;
 
 import lk.ruh.facebookapp.database.Mydatabase;
+import static lk.ruh.facebookapp.database.Mydatabase.DB_NAME;
+import static lk.ruh.facebookapp.database.Mydatabase.DB_VERSION;
 
-import static lk.ruh.facebookapp.data.MyDataBase.DB_NAME;
-import static lk.ruh.facebookapp.data.MyDataBase.DB_VERSION;
 
 public class MainActivity extends AppCompatActivity {
 
