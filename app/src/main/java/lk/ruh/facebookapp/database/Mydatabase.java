@@ -64,10 +64,13 @@ public class Mydatabase extends SQLiteOpenHelper {
         return  rs;
     }
 
-    public  Cursor getStudentName(String stu_name){
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor rs = db.rawQuery("SELECT * FROM "+TABLE_NAME + " WHERE name = "+stu_name,null);
-        return rs;
+    public  Cursor getStudentName(String stu_name,SQLiteDatabase sqLiteDatabase){
+
+        String[] projection = {COL_2,COL_3};
+        String selection =COL_1 +" LIKE ?";
+        String [] selection_item = {stu_name};
+        Cursor cursor =sqLiteDatabase.query(TABLE_NAME,projection,selection,selection_item,null,null,null);
+        return  cursor;
     }
 
 }
